@@ -37,7 +37,7 @@ An exploratory analysis on Kiva loan data found [here on Kaggle.com.](https://ww
 
    Deeper look at Last three, budding regions. Scope for more funding? (How much do they need really?)
 
-Mid three? How can we improve ? Do they need? (Verify with poverty index )
+   Mid three? How can we improve ? Do they need? (Verify with poverty index )
 
 4. Lending to teams vs Lending to individuals, in what all sectors does it make a difference? 
 
