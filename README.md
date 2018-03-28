@@ -13,6 +13,8 @@ An exploratory analysis on Kiva loan data found [here on Kaggle.com.](https://ww
 
 ### General Overview (Ideas that can be implemented)
 
+![General Overview](https://github.com/taniamukherjee/Assignment_betterworld/blob/master/image/data_view.jpg)
+
 1. Overall picture of the statistics of kiva loans all over the world(eg: loan_amount, gender split, activity, sectors, etc)
 
 2. Have a base world map which can be zoomed on each continent and be able to click on each country which would pop up the existing statistics on Kiva data Countrywise (eg: loan_amount, most_active_sector )
@@ -29,6 +31,8 @@ An exploratory analysis on Kiva loan data found [here on Kaggle.com.](https://ww
 
 ### Story Telling
 
+![Story Telling](https://github.com/taniamukherjee/Assignment_betterworld/blob/master/image/storytelling.jpg)
+
 1. Show correlation between gender and kiva loans and come up with other correlations (we will work on this using tableau and come up with insights)
 
 2. Where could the money lended by lenders be efficiently utilized ? (Measure by growth/poverty)
@@ -44,6 +48,8 @@ An exploratory analysis on Kiva loan data found [here on Kaggle.com.](https://ww
 
 
 ### Possible Prediction/Machine Learning Applications
+
+![Machine Learning](https://github.com/taniamukherjee/Assignment_betterworld/blob/master/image/DL_multilayer.jpg)
 
 1. Predict where could the money lended by lenders be efficiently utilized (to be decided)
 
