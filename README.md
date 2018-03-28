@@ -33,9 +33,9 @@ An exploratory analysis on Kiva loan data found [here on Kaggle.com.](https://ww
 
 2. Where could the money lended by lenders be efficiently utilized ? (Measure by growth/poverty)
 
-3. Deeper look at Philippines, Kenya & Peru (Top 3 by number of loans) By sector, activity, repayment. Scrape local news around the time of much increase in loans (Is it Kiva popularity or is it the need?) . 
+3. Deeper look at Philippines, Kenya & Peru (Top 3 by number of loans) By sector, activity, repayment. Scrape local news        around the time of much increase in loans (Is it Kiva popularity or is it the need?) . 
 
-Deeper look at Last three, budding regions. Scope for more funding? (How much do they need really?)
+   Deeper look at Last three, budding regions. Scope for more funding? (How much do they need really?)
 
 Mid three? How can we improve ? Do they need? (Verify with poverty index )
 
@@ -43,7 +43,7 @@ Mid three? How can we improve ? Do they need? (Verify with poverty index )
 
 
 
-### Prediction/Machine Learning Applications
+### Possible Prediction/Machine Learning Applications
 
 1. Predict where could the money lended by lenders be efficiently utilized (to be decided)
 
