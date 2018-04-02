@@ -3,14 +3,13 @@
 from credentials import user, password
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
-from sqlalchemy import create_engine, func
-from sqlalchemy import inspect
+from sqlalchemy import create_engine, func, inspect
 
 # PyMySQL 
 import pymysql
-
+pymysql.install_as_MySQLdb()
 # Create Engine and Pass in MySQL Connection
-engine = create_engine(f"mysql://{user}:{password}@localhost:3306/kiva")
+engine = create_engine("mysql://root:booboohead1337@localhost:3306/kiva")
 
 #################################################
 # Database Setup
@@ -39,8 +38,8 @@ for column in loans.__table__.columns:
 for column in country.__table__.columns:
     column_list_country.append(column.key)
 
-print(column_list_country)
-print(column_list_loans)
+# print(column_list_country)
+# print(column_list_loans)
 
 
 from flask import (
@@ -104,6 +103,7 @@ def get_country_info(country):
     
     return jsonify(full_dict)
 
+# App for loan lenders
 
 if __name__ == "__main__":
     app.run(debug=True)
