@@ -28,6 +28,7 @@ conn = engine.connect()
 
 loans = Base.classes.loans
 country = Base.classes.country
+flags = Base.classes.flags
 
 # Create empty list to get column names for querying
 
@@ -103,7 +104,19 @@ def get_country_info(country):
     
     return jsonify(full_dict)
 
-# App for loan lenders
+# Route to get flag url
+@app.route("/flag/<country>")
+def get_country_flag(country):
+    country = country.capitalize()
+    flag_query = session.query(flags).\
+        filter(flags.country == country)
+    for flag in flag_query:
+        flag_dict = {}
+        flag_dict["country"] = flag.country
+        flag_dict["url"] = flag.url
+
+    return jsonify(flag_dict)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
