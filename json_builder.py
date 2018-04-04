@@ -65,6 +65,6 @@ for country in clean:
 
 # make json of final list
 
-with open("/static/data/countries.json", w) as path:
+with open("/static/files/countries.json", w) as path:
     json.dump(full_list, path)
 
