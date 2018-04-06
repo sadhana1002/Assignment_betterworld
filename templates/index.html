@@ -26,13 +26,26 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
+
 <body>
+    <img class="img-fluid" src="../static/images/profile1.jpg" alt="">
     <div class="jumbotron">
     </div>
+ 
+    <h2 class="text-uppercase mb-0">Betterworld With Kiva</h2>
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">Microfunding with Kiva</a>
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">About: Kiva is an international nonprofit, founded in 2005 and based in San Francisco, with a mission to connect people through lending to alleviate poverty. By funding thrugh Kiva , anyone can support people looking to create a better future for themselves, their families and their communities.</a>
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">Total donation goes to public and data is Public</a>
+  
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">           </a>
+  </div>
     <div class="container-fluid">
+      </div>
+      <h2 class="text-center text-uppercase text-white">Global Map Showing Kiva Loan Distribution</h2>
         <div id="map"></div>
     </div>
     
+    <h2 class="text-center text-uppercase text-white">Gender Analysis</h2>
     <div class="showcase__section" id="bubble">
                 <div class="spacer --small"></div>
                 <div id="bubbleplots">
@@ -42,7 +55,7 @@
                     <div class="control-row">
                       Country: <select class="countrydata">
                       </select>
-
+                      <h2 class="text-center text-uppercase text-white">Top Three Borrower</h2>
                       <a href="topCountriesByLoanCount" target="_blank">Top Countries by Loan Count</a>
 
                     </div>
@@ -51,5 +64,15 @@
               </div>
               <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
               <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+              <h2 class="text-center text-uppercase text-white">Local Field Partner</h2>
+              <img class="img-fluid" src="../static/images/Philippines.jpeg" alt="">
+              <img class="img-fluid" src="../static/images/Peru.jpeg" alt="">
+              <img class="img-fluid" src="../static/images/Kenya.jpeg" alt="">
+              <h2 class="text-center text-uppercase text-white">Poorest Countries</h2>
+              <img class="img-fluid" id="poorest" src="../static/images/poorest.jpg" alt="">
+              <h2 class="text-center text-uppercase text-white">Total Yearly Stacked Bar</h2>
+              <img class="img-fluid" id="stacked"  src="../static/images/newplot.png" alt="">
+      
+              
 </body>
 </html>

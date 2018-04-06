@@ -1,892 +1,464 @@
-[
-  {
-    "amount": 150150, 
-    "sector": "Agriculture", 
-    "year": 2006
-  }, 
-  {
-    "amount": 1798880, 
-    "sector": "Agriculture", 
-    "year": 2007
-  }, 
-  {
-    "amount": 1875359, 
-    "sector": "Agriculture", 
-    "year": 2008
-  }, 
-  {
-    "amount": 2525013, 
-    "sector": "Agriculture", 
-    "year": 2009
-  }, 
-  {
-    "amount": 3670910, 
-    "sector": "Agriculture", 
-    "year": 2010
-  }, 
-  {
-    "amount": 6429762, 
-    "sector": "Agriculture", 
-    "year": 2011
-  }, 
-  {
-    "amount": 7491108, 
-    "sector": "Agriculture", 
-    "year": 2012
-  }, 
-  {
-    "amount": 8599202, 
-    "sector": "Agriculture", 
-    "year": 2013
-  }, 
-  {
-    "amount": 9100853, 
-    "sector": "Agriculture", 
-    "year": 2014
-  }, 
-  {
-    "amount": 7488662, 
-    "sector": "Agriculture", 
-    "year": 2015
-  }, 
-  {
-    "amount": 8412872, 
-    "sector": "Agriculture", 
-    "year": 2016
-  }, 
-  {
-    "amount": 8782911, 
-    "sector": "Agriculture", 
-    "year": 2017
-  }, 
-  {
-    "amount": 39, 
-    "sector": "Agriculture", 
-    "year": 2018
-  }, 
-  {
-    "amount": 41700, 
-    "sector": "Arts", 
-    "year": 2006
-  }, 
-  {
-    "amount": 468219, 
-    "sector": "Arts", 
-    "year": 2007
-  }, 
-  {
-    "amount": 375806, 
-    "sector": "Arts", 
-    "year": 2008
-  }, 
-  {
-    "amount": 375927, 
-    "sector": "Arts", 
-    "year": 2009
-  }, 
-  {
-    "amount": 474478, 
-    "sector": "Arts", 
-    "year": 2010
-  }, 
-  {
-    "amount": 666546, 
-    "sector": "Arts", 
-    "year": 2011
-  }, 
-  {
-    "amount": 937377, 
-    "sector": "Arts", 
-    "year": 2012
-  }, 
-  {
-    "amount": 792850, 
-    "sector": "Arts", 
-    "year": 2013
-  }, 
-  {
-    "amount": 968411, 
-    "sector": "Arts", 
-    "year": 2014
-  }, 
-  {
-    "amount": 901165, 
-    "sector": "Arts", 
-    "year": 2015
-  }, 
-  {
-    "amount": 1126834, 
-    "sector": "Arts", 
-    "year": 2016
-  }, 
-  {
-    "amount": 1466540, 
-    "sector": "Arts", 
-    "year": 2017
-  }, 
-  {
-    "amount": 155350, 
-    "sector": "Clothing", 
-    "year": 2006
-  }, 
-  {
-    "amount": 1082690, 
-    "sector": "Clothing", 
-    "year": 2007
-  }, 
-  {
-    "amount": 550527, 
-    "sector": "Clothing", 
-    "year": 2008
-  }, 
-  {
-    "amount": 879475, 
-    "sector": "Clothing", 
-    "year": 2009
-  }, 
-  {
-    "amount": 1276108, 
-    "sector": "Clothing", 
-    "year": 2010
-  }, 
-  {
-    "amount": 1972875, 
-    "sector": "Clothing", 
-    "year": 2011
-  }, 
-  {
-    "amount": 2273016, 
-    "sector": "Clothing", 
-    "year": 2012
-  }, 
-  {
-    "amount": 2409861, 
-    "sector": "Clothing", 
-    "year": 2013
-  }, 
-  {
-    "amount": 3413220, 
-    "sector": "Clothing", 
-    "year": 2014
-  }, 
-  {
-    "amount": 2654217, 
-    "sector": "Clothing", 
-    "year": 2015
-  }, 
-  {
-    "amount": 2499253, 
-    "sector": "Clothing", 
-    "year": 2016
-  }, 
-  {
-    "amount": 3047145, 
-    "sector": "Clothing", 
-    "year": 2017
-  }, 
-  {
-    "amount": 0, 
-    "sector": "Clothing", 
-    "year": 2018
-  }, 
-  {
-    "amount": 55550, 
-    "sector": "Construction", 
-    "year": 2006
-  }, 
-  {
-    "amount": 294788, 
-    "sector": "Construction", 
-    "year": 2007
-  }, 
-  {
-    "amount": 246858, 
-    "sector": "Construction", 
-    "year": 2008
-  }, 
-  {
-    "amount": 382043, 
-    "sector": "Construction", 
-    "year": 2009
-  }, 
-  {
-    "amount": 538146, 
-    "sector": "Construction", 
-    "year": 2010
-  }, 
-  {
-    "amount": 771949, 
-    "sector": "Construction", 
-    "year": 2011
-  }, 
-  {
-    "amount": 640357, 
-    "sector": "Construction", 
-    "year": 2012
-  }, 
-  {
-    "amount": 650704, 
-    "sector": "Construction", 
-    "year": 2013
-  }, 
-  {
-    "amount": 707732, 
-    "sector": "Construction", 
-    "year": 2014
-  }, 
-  {
-    "amount": 561501, 
-    "sector": "Construction", 
-    "year": 2015
-  }, 
-  {
-    "amount": 538523, 
-    "sector": "Construction", 
-    "year": 2016
-  }, 
-  {
-    "amount": 548675, 
-    "sector": "Construction", 
-    "year": 2017
-  }, 
-  {
-    "amount": 14696, 
-    "sector": "Education", 
-    "year": 2007
-  }, 
-  {
-    "amount": 14804, 
-    "sector": "Education", 
-    "year": 2008
-  }, 
-  {
-    "amount": 65951, 
-    "sector": "Education", 
-    "year": 2009
-  }, 
-  {
-    "amount": 180834, 
-    "sector": "Education", 
-    "year": 2010
-  }, 
-  {
-    "amount": 384292, 
-    "sector": "Education", 
-    "year": 2011
-  }, 
-  {
-    "amount": 1159872, 
-    "sector": "Education", 
-    "year": 2012
-  }, 
-  {
-    "amount": 2658550, 
-    "sector": "Education", 
-    "year": 2013
-  }, 
-  {
-    "amount": 3995825, 
-    "sector": "Education", 
-    "year": 2014
-  }, 
-  {
-    "amount": 4038614, 
-    "sector": "Education", 
-    "year": 2015
-  }, 
-  {
-    "amount": 3940855, 
-    "sector": "Education", 
-    "year": 2016
-  }, 
-  {
-    "amount": 4122005, 
-    "sector": "Education", 
-    "year": 2017
-  }, 
-  {
-    "amount": 3175, 
-    "sector": "Entertainment", 
-    "year": 2006
-  }, 
-  {
-    "amount": 6342, 
-    "sector": "Entertainment", 
-    "year": 2007
-  }, 
-  {
-    "amount": 12126, 
-    "sector": "Entertainment", 
-    "year": 2008
-  }, 
-  {
-    "amount": 30408, 
-    "sector": "Entertainment", 
-    "year": 2009
-  }, 
-  {
-    "amount": 65251, 
-    "sector": "Entertainment", 
-    "year": 2010
-  }, 
-  {
-    "amount": 126574, 
-    "sector": "Entertainment", 
-    "year": 2011
-  }, 
-  {
-    "amount": 125332, 
-    "sector": "Entertainment", 
-    "year": 2012
-  }, 
-  {
-    "amount": 89445, 
-    "sector": "Entertainment", 
-    "year": 2013
-  }, 
-  {
-    "amount": 70771, 
-    "sector": "Entertainment", 
-    "year": 2014
-  }, 
-  {
-    "amount": 73467, 
-    "sector": "Entertainment", 
-    "year": 2015
-  }, 
-  {
-    "amount": 61929, 
-    "sector": "Entertainment", 
-    "year": 2016
-  }, 
-  {
-    "amount": 58893, 
-    "sector": "Entertainment", 
-    "year": 2017
-  }, 
-  {
-    "amount": 563550, 
-    "sector": "Food", 
-    "year": 2006
-  }, 
-  {
-    "amount": 3350767, 
-    "sector": "Food", 
-    "year": 2007
-  }, 
-  {
-    "amount": 2314794, 
-    "sector": "Food", 
-    "year": 2008
-  }, 
-  {
-    "amount": 3892632, 
-    "sector": "Food", 
-    "year": 2009
-  }, 
-  {
-    "amount": 3906427, 
-    "sector": "Food", 
-    "year": 2010
-  }, 
-  {
-    "amount": 5898408, 
-    "sector": "Food", 
-    "year": 2011
-  }, 
-  {
-    "amount": 6374295, 
-    "sector": "Food", 
-    "year": 2012
-  }, 
-  {
-    "amount": 6304637, 
-    "sector": "Food", 
-    "year": 2013
-  }, 
-  {
-    "amount": 7027067, 
-    "sector": "Food", 
-    "year": 2014
-  }, 
-  {
-    "amount": 6232463, 
-    "sector": "Food", 
-    "year": 2015
-  }, 
-  {
-    "amount": 6066283, 
-    "sector": "Food", 
-    "year": 2016
-  }, 
-  {
-    "amount": 7369480, 
-    "sector": "Food", 
-    "year": 2017
-  }, 
-  {
-    "amount": 26675, 
-    "sector": "Health", 
-    "year": 2006
-  }, 
-  {
-    "amount": 137969, 
-    "sector": "Health", 
-    "year": 2007
-  }, 
-  {
-    "amount": 58119, 
-    "sector": "Health", 
-    "year": 2008
-  }, 
-  {
-    "amount": 129211, 
-    "sector": "Health", 
-    "year": 2009
-  }, 
-  {
-    "amount": 188234, 
-    "sector": "Health", 
-    "year": 2010
-  }, 
-  {
-    "amount": 273593, 
-    "sector": "Health", 
-    "year": 2011
-  }, 
-  {
-    "amount": 355128, 
-    "sector": "Health", 
-    "year": 2012
-  }, 
-  {
-    "amount": 717849, 
-    "sector": "Health", 
-    "year": 2013
-  }, 
-  {
-    "amount": 912314, 
-    "sector": "Health", 
-    "year": 2014
-  }, 
-  {
-    "amount": 846811, 
-    "sector": "Health", 
-    "year": 2015
-  }, 
-  {
-    "amount": 800915, 
-    "sector": "Health", 
-    "year": 2016
-  }, 
-  {
-    "amount": 1314514, 
-    "sector": "Health", 
-    "year": 2017
-  }, 
-  {
-    "amount": 15600, 
-    "sector": "Housing", 
-    "year": 2006
-  }, 
-  {
-    "amount": 140198, 
-    "sector": "Housing", 
-    "year": 2007
-  }, 
-  {
-    "amount": 95098, 
-    "sector": "Housing", 
-    "year": 2008
-  }, 
-  {
-    "amount": 224753, 
-    "sector": "Housing", 
-    "year": 2009
-  }, 
-  {
-    "amount": 494488, 
-    "sector": "Housing", 
-    "year": 2010
-  }, 
-  {
-    "amount": 1047426, 
-    "sector": "Housing", 
-    "year": 2011
-  }, 
-  {
-    "amount": 1411223, 
-    "sector": "Housing", 
-    "year": 2012
-  }, 
-  {
-    "amount": 1684688, 
-    "sector": "Housing", 
-    "year": 2013
-  }, 
-  {
-    "amount": 2567164, 
-    "sector": "Housing", 
-    "year": 2014
-  }, 
-  {
-    "amount": 1826817, 
-    "sector": "Housing", 
-    "year": 2015
-  }, 
-  {
-    "amount": 1308854, 
-    "sector": "Housing", 
-    "year": 2016
-  }, 
-  {
-    "amount": 865509, 
-    "sector": "Housing", 
-    "year": 2017
-  }, 
-  {
-    "amount": 33525, 
-    "sector": "Manufacturing", 
-    "year": 2006
-  }, 
-  {
-    "amount": 200158, 
-    "sector": "Manufacturing", 
-    "year": 2007
-  }, 
-  {
-    "amount": 118388, 
-    "sector": "Manufacturing", 
-    "year": 2008
-  }, 
-  {
-    "amount": 288983, 
-    "sector": "Manufacturing", 
-    "year": 2009
-  }, 
-  {
-    "amount": 315182, 
-    "sector": "Manufacturing", 
-    "year": 2010
-  }, 
-  {
-    "amount": 557442, 
-    "sector": "Manufacturing", 
-    "year": 2011
-  }, 
-  {
-    "amount": 649159, 
-    "sector": "Manufacturing", 
-    "year": 2012
-  }, 
-  {
-    "amount": 606311, 
-    "sector": "Manufacturing", 
-    "year": 2013
-  }, 
-  {
-    "amount": 545283, 
-    "sector": "Manufacturing", 
-    "year": 2014
-  }, 
-  {
-    "amount": 430632, 
-    "sector": "Manufacturing", 
-    "year": 2015
-  }, 
-  {
-    "amount": 421935, 
-    "sector": "Manufacturing", 
-    "year": 2016
-  }, 
-  {
-    "amount": 561456, 
-    "sector": "Manufacturing", 
-    "year": 2017
-  }, 
-  {
-    "amount": 47492, 
-    "sector": "Personal Use", 
-    "year": 2008
-  }, 
-  {
-    "amount": 105060, 
-    "sector": "Personal Use", 
-    "year": 2009
-  }, 
-  {
-    "amount": 465602, 
-    "sector": "Personal Use", 
-    "year": 2010
-  }, 
-  {
-    "amount": 785992, 
-    "sector": "Personal Use", 
-    "year": 2011
-  }, 
-  {
-    "amount": 798174, 
-    "sector": "Personal Use", 
-    "year": 2012
-  }, 
-  {
-    "amount": 705386, 
-    "sector": "Personal Use", 
-    "year": 2013
-  }, 
-  {
-    "amount": 907782, 
-    "sector": "Personal Use", 
-    "year": 2014
-  }, 
-  {
-    "amount": 1435496, 
-    "sector": "Personal Use", 
-    "year": 2015
-  }, 
-  {
-    "amount": 1252662, 
-    "sector": "Personal Use", 
-    "year": 2016
-  }, 
-  {
-    "amount": 1465107, 
-    "sector": "Personal Use", 
-    "year": 2017
-  }, 
-  {
-    "amount": 369950, 
-    "sector": "Retail", 
-    "year": 2006
-  }, 
-  {
-    "amount": 2275877, 
-    "sector": "Retail", 
-    "year": 2007
-  }, 
-  {
-    "amount": 1374999, 
-    "sector": "Retail", 
-    "year": 2008
-  }, 
-  {
-    "amount": 2936071, 
-    "sector": "Retail", 
-    "year": 2009
-  }, 
-  {
-    "amount": 3819260, 
-    "sector": "Retail", 
-    "year": 2010
-  }, 
-  {
-    "amount": 5186727, 
-    "sector": "Retail", 
-    "year": 2011
-  }, 
-  {
-    "amount": 5186575, 
-    "sector": "Retail", 
-    "year": 2012
-  }, 
-  {
-    "amount": 5189344, 
-    "sector": "Retail", 
-    "year": 2013
-  }, 
-  {
-    "amount": 5596991, 
-    "sector": "Retail", 
-    "year": 2014
-  }, 
-  {
-    "amount": 4903801, 
-    "sector": "Retail", 
-    "year": 2015
-  }, 
-  {
-    "amount": 4671796, 
-    "sector": "Retail", 
-    "year": 2016
-  }, 
-  {
-    "amount": 5814799, 
-    "sector": "Retail", 
-    "year": 2017
-  }, 
-  {
-    "amount": 253500, 
-    "sector": "Services", 
-    "year": 2006
-  }, 
-  {
-    "amount": 1170241, 
-    "sector": "Services", 
-    "year": 2007
-  }, 
-  {
-    "amount": 907648, 
-    "sector": "Services", 
-    "year": 2008
-  }, 
-  {
-    "amount": 2065891, 
-    "sector": "Services", 
-    "year": 2009
-  }, 
-  {
-    "amount": 2220563, 
-    "sector": "Services", 
-    "year": 2010
-  }, 
-  {
-    "amount": 3332790, 
-    "sector": "Services", 
-    "year": 2011
-  }, 
-  {
-    "amount": 3798647, 
-    "sector": "Services", 
-    "year": 2012
-  }, 
-  {
-    "amount": 3884420, 
-    "sector": "Services", 
-    "year": 2013
-  }, 
-  {
-    "amount": 4139828, 
-    "sector": "Services", 
-    "year": 2014
-  }, 
-  {
-    "amount": 2903865, 
-    "sector": "Services", 
-    "year": 2015
-  }, 
-  {
-    "amount": 2731525, 
-    "sector": "Services", 
-    "year": 2016
-  }, 
-  {
-    "amount": 3148511, 
-    "sector": "Services", 
-    "year": 2017
-  }, 
-  {
-    "amount": 28675, 
-    "sector": "Transportation", 
-    "year": 2006
-  }, 
-  {
-    "amount": 344723, 
-    "sector": "Transportation", 
-    "year": 2007
-  }, 
-  {
-    "amount": 459065, 
-    "sector": "Transportation", 
-    "year": 2008
-  }, 
-  {
-    "amount": 806163, 
-    "sector": "Transportation", 
-    "year": 2009
-  }, 
-  {
-    "amount": 967649, 
-    "sector": "Transportation", 
-    "year": 2010
-  }, 
-  {
-    "amount": 1236804, 
-    "sector": "Transportation", 
-    "year": 2011
-  }, 
-  {
-    "amount": 1005016, 
-    "sector": "Transportation", 
-    "year": 2012
-  }, 
-  {
-    "amount": 1250507, 
-    "sector": "Transportation", 
-    "year": 2013
-  }, 
-  {
-    "amount": 746561, 
-    "sector": "Transportation", 
-    "year": 2014
-  }, 
-  {
-    "amount": 839820, 
-    "sector": "Transportation", 
-    "year": 2015
-  }, 
-  {
-    "amount": 649993, 
-    "sector": "Transportation", 
-    "year": 2016
-  }, 
-  {
-    "amount": 464600, 
-    "sector": "Transportation", 
-    "year": 2017
-  }, 
-  {
-    "amount": 45878, 
-    "sector": "Wholesale", 
-    "year": 2007
-  }, 
-  {
-    "amount": 36212, 
-    "sector": "Wholesale", 
-    "year": 2008
-  }, 
-  {
-    "amount": 49325, 
-    "sector": "Wholesale", 
-    "year": 2009
-  }, 
-  {
-    "amount": 37339, 
-    "sector": "Wholesale", 
-    "year": 2010
-  }, 
-  {
-    "amount": 79709, 
-    "sector": "Wholesale", 
-    "year": 2011
-  }, 
-  {
-    "amount": 106385, 
-    "sector": "Wholesale", 
-    "year": 2012
-  }, 
-  {
-    "amount": 120053, 
-    "sector": "Wholesale", 
-    "year": 2013
-  }, 
-  {
-    "amount": 72032, 
-    "sector": "Wholesale", 
-    "year": 2014
-  }, 
-  {
-    "amount": 98202, 
-    "sector": "Wholesale", 
-    "year": 2015
-  }, 
-  {
-    "amount": 86875, 
-    "sector": "Wholesale", 
-    "year": 2016
-  }, 
-  {
-    "amount": 132114, 
-    "sector": "Wholesale", 
-    "year": 2017
+
+{
+  "Agriculture": {
+    "year": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018
+    ],
+    "amount": [
+      150150,
+      1798880,
+      1875359,
+      2525013,
+      3670910,
+      6429762,
+      7491108,
+      8599202,
+      9100853,
+      7488662,
+      8412872,
+      8782911,
+      39,
+      150150,
+      1798880,
+      1875359,
+      2525013,
+      3670910,
+      6429762,
+      7491108,
+      8599202,
+      9100853,
+      7488662,
+      8412872,
+      8782911,
+      39
+    ]
+  },
+  "Arts": {
+    "year": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017
+    ],
+    "amount": [
+      41700,
+      468219,
+      375806,
+      375927,
+      474478,
+      666546,
+      937377,
+      792850,
+      968411,
+      901165,
+      1126834,
+      1466540,
+      41700,
+      468219,
+      375806,
+      375927,
+      474478,
+      666546,
+      937377,
+      792850,
+      968411,
+      901165,
+      1126834,
+      1466540
+    ]
+  },
+  "Clothing": {
+    "year": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018
+    ],
+    "amount": [
+      155350,
+      1082690,
+      550527,
+      879475,
+      1276108,
+      1972875,
+      2273016,
+      2409861,
+      3413220,
+      2654217,
+      2499253,
+      3047145,
+      0
+    ]
+  },
+  "Construction": {
+    "year": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017
+    ],
+    "amount": [
+      55550,
+      294788,
+      246858,
+      382043,
+      538146,
+      771949,
+      640357,
+      650704,
+      707732,
+      561501,
+      538523,
+      548675
+    ]
+  },
+  "Education": {
+    "year": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
+    "amount": [
+      14696,
+      14804,
+      65951,
+      180834,
+      384292,
+      1159872,
+      2658550,
+      3995825,
+      4038614,
+      3940855,
+      4122005
+    ]
+  },
+  "Entertainment": {
+    "year": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017
+    ],
+    "amount": [
+      3175,
+      6342,
+      12126,
+      30408,
+      65251,
+      126574,
+      125332,
+      89445,
+      70771,
+      73467,
+      61929,
+      58893
+    ]
+  },
+  "Food": {
+    "year": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017
+    ],
+    "amount": [
+      563550,
+      3350767,
+      2314794,
+      3892632,
+      3906427,
+      5898408,
+      6374295,
+      6304637,
+      7027067,
+      6232463,
+      6066283,
+      7369480
+    ]
+  },
+  "Health": {
+    "year": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017
+    ],
+    "amount": [
+      26675,
+      137969,
+      58119,
+      129211,
+      188234,
+      273593,
+      355128,
+      717849,
+      912314,
+      846811,
+      800915,
+      1314514
+    ]
+  },
+  "Housing": {
+    "year": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017
+    ],
+    "amount": [
+      15600,
+      140198,
+      95098,
+      224753,
+      494488,
+      1047426,
+      1411223,
+      1684688,
+      2567164,
+      1826817,
+      1308854,
+      865509
+    ]
+  },
+  "Manufacturing": {
+    "year": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017
+    ],
+    "amount": [
+      33525,
+      200158,
+      118388,
+      288983,
+      315182,
+      557442,
+      649159,
+      606311,
+      545283,
+      430632,
+      421935,
+      561456
+    ]
+  },
+  "Personal_Use": {
+    "year": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
+    "amount": [
+      47492,
+      105060,
+      465602,
+      785992,
+      798174,
+      705386,
+      907782,
+      1435496,
+      1252662,
+      1465107
+    ]
+  },
+  "Retail": {
+    "year": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017
+    ],
+    "amount": [
+      369950,
+      2275877,
+      1374999,
+      2936071,
+      3819260,
+      5186727,
+      5186575,
+      5189344,
+      5596991,
+      4903801,
+      4671796,
+      5814799
+    ]
+  },
+  "Services": {
+    "year": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017
+    ],
+    "amount": [
+      253500,
+      1170241,
+      907648,
+      2065891,
+      2220563,
+      3332790,
+      3798647,
+      3884420,
+      4139828,
+      2903865,
+      2731525,
+      3148511
+    ]
+  },
+  "Transportation": {
+    "year": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017
+    ],
+    "amount": [
+      28675,
+      344723,
+      459065,
+      806163,
+      967649,
+      1236804,
+      1005016,
+      1250507,
+      746561,
+      839820,
+      649993,
+      464600
+    ]
+  },
+  "Wholesale": {
+    "year": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
+    "amount": [
+      45878,
+      36212,
+      49325,
+      37339,
+      79709,
+      106385,
+      120053,
+      72032,
+      98202,
+      86875,
+      132114
+    ]
   }
-]
+}

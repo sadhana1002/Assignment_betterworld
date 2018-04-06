@@ -253,7 +253,7 @@ function setBubblePlot(chosenCountry) {
 
 Plotly.d3.json(url, function(error, response) {
 
-        console.log(response);
+        // console.log(response);
         borrowerResponseData = response    
         
         for (countryName in response){       
@@ -350,3 +350,104 @@ function updateCountry(){
 countrySelector.addEventListener('change', updateCountry, false);
 
 
+var stackedURL = "../static/files/stacked_by_year.json"
+d3.json(stackedURL, function(error, response){
+    // console.log(response);
+    // console.log(response.Agriculture.year);
+    var agri = {
+        x: response.Agriculture.year,
+        y: response.Agriculture.amount,
+        name: "Agriculture",
+        type: "bar"
+    }
+    var arts = {
+        x: response.Arts.year,
+        y: response.Arts.amount,
+        name: "Arts",
+        type: "bar"
+    }
+    var clothing = {
+        x: response.Clothing.year,
+        y: response.Clothing.amount,
+        name: "Clothing",
+        type: "bar"
+    }
+    var construction = {
+        x: response.Construction.year,
+        y: response.Construction.amount,
+        name: "Construction",
+        type: "bar"
+    }
+    var education = {
+        x: response.Education.year,
+        y: response.Education.amount,
+        name: "Education",
+        type: "bar"
+    }
+    var entertainment = {
+        x: response.Entertainment.year,
+        y: response.Entertainment.amount,
+        name: "Entertainment",
+        type: "bar"
+    }
+    var food = {
+        x: response.Food.year,
+        y: response.Food.amount,
+        name: "Food",
+        type: "bar"
+    }
+    var health = {
+        x: response.Health.year,
+        y: response.Health.amount,
+        name: "Health",
+        type: "bar"
+    }
+    var housing = {
+        x: response.Housing.year,
+        y: response.Housing.amount,
+        name: "Housing",
+        type: "bar"
+    }
+    var manu = {
+        x: response.Manufacturing.year,
+        y: response.Manufacturing.amount,
+        name: "Manufacturing",
+        type: "bar"
+    }
+    var personal = {
+        x: response.Personal_Use.year,
+        y: response.Personal_Use.amount,
+        name: "Personal Use",
+        type: "bar"
+    }
+    var ret = {
+        x: response.Retail.year,
+        y: response.Retail.amount,
+        name: "Retail",
+        type: "bar"
+    }
+    var ser = {
+        x: response.Services.year,
+        y: response.Services.amount,
+        name: "Services",
+        type: "bar"
+    }
+    var transp = {
+        x: response.Transportation.year,
+        y: response.Transportation.amount,
+        name: "Transportation",
+        type: "bar"
+    }
+    var whole = {
+        x: response.Wholesale.year,
+        y: response.Wholesale.amount,
+        name: "Wholesale",
+        type: "bar"
+    }
+    var data = [agri,arts,clothing, construction, entertainment,food, health, housing,manu,personal, ret,ser, transp,whole];
+    var layout = {barmode: "stack"}
+    // console.log(response.Wholesale.year)
+    Plotly.newPlot("stacked-bar", data, layout)
+
+    
+})

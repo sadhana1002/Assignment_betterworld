@@ -12,4 +12,15 @@
     margin-right: 8px;
     opacity: 0.7;
 }
+#poorest {
+    max-width:100%;
+    height:auto;
+    max-height:100%;
+ }
+
+ #stacked {
+    max-width:100%;
+    height:auto;
+    max-height:100%;
+ }
 
