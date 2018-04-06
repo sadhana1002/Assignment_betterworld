@@ -13,25 +13,25 @@ import pickle
 import pymysql
 pymysql.install_as_MySQLdb()
 # Create Engine and Pass in MySQL Connection
-engine = create_engine(f"mysql://root:root@localhost:3306/kiva")
+engine = create_engine(f"mysql://root:Mkashi029@@localhost:3306/kiva")
 
 # #################################################
 # # Database Setup
 # #################################################
 
 
-# # Create Base
-# Base = automap_base()
-# Base.prepare(engine, reflect = True)
+# Create Base
+Base = automap_base()
+Base.prepare(engine, reflect = True)
 
-# # Create our session (link) from Python to the DB
-# session = Session(engine)
-# conn = engine.connect()
+# Create our session (link) from Python to the DB
+session = Session(engine)
+conn = engine.connect()
 
-# # Set tables
+# Set tables
 
-# loans = Base.classes.loans
-# country = Base.classes.country
+loans = Base.classes.loans
+country = Base.classes.country
 # flags = Base.classes.flags
 
 # # Create empty list to get column names for querying
@@ -109,17 +109,17 @@ def get_country_info(country):
     return jsonify(full_dict)
 
 # Route to get flag url
-@app.route("/flag/<country>")
-def get_country_flag(country):
-    country = country.capitalize()
-    flag_query = session.query(flags).\
-        filter(flags.country == country)
-    for flag in flag_query:
-        flag_dict = {}
-        flag_dict["country"] = flag.country
-        flag_dict["url"] = flag.url
+# @app.route("/flag/<country>")
+# def get_country_flag(country):
+#     country = country.capitalize()
+#     flag_query = session.query(flags).\
+#         filter(flags.country == country)
+#     for flag in flag_query:
+#         flag_dict = {}
+#         flag_dict["country"] = flag.country
+#         flag_dict["url"] = flag.url
 
-    return jsonify(flag_dict)
+#     return jsonify(flag_dict)
 
 @app.route("/gender_disperity")
 def gender_count():
