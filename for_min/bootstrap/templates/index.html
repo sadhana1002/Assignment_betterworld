@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Olympics</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="../static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Plugin CSS -->
+  <link href="../static/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="../static/css/freelancer.min.css" rel="stylesheet">
+  <link href="../static/css/style.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Betterworld with Kiva</a>
+      <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-0 mx-lg-1">
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
+              <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Map</a>
+            <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Graph</a>
+             <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Prediction</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead bg-primary text-white text-center">
+    <div class="container">
+
+      <h2 class="text-uppercase mb-0">Microfunding with Kiva</h2>
+      <img class="img-fluid" src="../static/img/portfolio/profile.jpg" alt="">
+     
+      <h2 class="font-weight-light mb-0">data for good</h2>
+    </div>
+  </header>
+  <!-- About Section -->
+  <section class="bg-primary text-white mb-0" id="about">
+
+    <h2 class="text-center text-uppercase text-white">Why Kiva</h2>
+   
+    
+     
+        <p class="lead">By lending as little as $25 on Kiva, anyone can help a borrower<p>
+        <p class="lead">Total donation goes to the borrower </p>
+        <p class="lead">Data is public</p>
+      </div>
+  
+      </div>
+  </section>
+  <!-- Portfolio Grid Section -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-secondary mb-0">Map</h2>
+      <hr class="star-dark mb-5"
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-secondary mb-0">GRAPH</h2>
+      <hr class="star-dark mb-5">
+      <h2 class="text-center text-uppercase text-secondary mb-0">Prediction</h2>
+      <hr class="star-dark mb-5">
+
+      <div class="row">
+        <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+          <div class="text-center">
+            <select id="genderSelectStackedBar" onchange="optionChangedStackedBar()"></select>
+          </div>
+        </div>
+        <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+          <div class="text-center">
+
+            <select id="sportSelectStackedBar" onchange="optionChangedStackedBar()"></select>
+          </div>
+        </div>
+        <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+          <div class="text-center">
+            <select id="yearSelectStackedBar" onchange="optionChangedStackedBar()"></select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <div id='stackedBar'></div>
+        </div>
+      </div>
+      <div>
+        
+              <select id="genderSelectCumulativeLine" onchange="optionChangedComparisonCharts()"></select>
+            </div>
+          </div>
+          <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <div class="text-center">
+              <select id="medalSelectCumulativeLine" onchange="optionChangedComparisonCharts()"></select>
+            </div>
+          </div>
+          <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <div class="text-center">
+              <select id="sportSelectCumulativeLine" onchange="optionChangedComparisonCharts()"></select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="text-center">
+          <br>
+          <p>Subhas plotly</p>
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <select id="countrySelectComparisonPlots1" onchange="optionChangedComparisonCharts()"></select>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <select id="countrySelectComparisonPlots2" onchange="optionChangedComparisonCharts()"></select>
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <div id="countryComparisonPlot"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <!-- ************************************************************************************************* -->
+          <div class="row">
+            <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <div class="text-center">
+                <select id="genderSelectComparisonPie" onchange="optionChangedComparisonCharts()"></select>
+              </div>
+            </div>
+            <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <div class="text-center">
+                <select id="medalSelectComparisonPie" onchange="optionChangedComparisonCharts()"></select>
+              </div>
+            </div>
+            <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <div class="text-center">
+                <select id="yearSelectComparisonPie" onchange="optionChangedComparisonCharts()"></select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+              <div id="countryComparisonPie1"></div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+              <div id="countryComparisonPie2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--             <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <div class="jumbotron">
+                <div class="text-center">
+                    <p>Select Year:</p>
+                    <select id="yearSelect" onchange="optionChangedComparisonCharts()"></select>
+                </div>
+            </div>
+        </div> -->
+      <!-- ************************************************************************************************* -->
+      <hr class="star-dark mb-5">
+      <h2 class="text-center text-uppercase text-secondary mb-0">Kiva at Poorest country </h2>
+      <hr class="star-dark mb-5">
+      <hr class="star-dark mb-5">
+      <h2 class="text-center text-uppercase text-secondary mb-0">Prediction</h2>
+      <hr class="star-dark mb-5">
+      <div class="row">
+    >
+
+        <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+          <div class="text-center">
+            <select id="genderSelectDemographicScatter" onchange="optionChangedDemographicScatter()"></select>
+          </div>
+        </div>
+        <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+          <div class="text-center">
+            <select id="medalSelectDemographicScatter" onchange="optionChangedDemographicScatter()"></select>
+          </div>
+        </div>
+        <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+          <div class="text-center">
+            <select id="sportSelectDemographicScatter" onchange="optionChangedDemographicScatter()"></select>
+          </div>
+        </div>
+        <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+          <div class="text-center">
+            <select id="yearSelectDemographicScatter" onchange="optionChangedDemographicScatter()"></select>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row"
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <div id="demographicScatterPlot"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <section id="contact">
+          <div class="container">
