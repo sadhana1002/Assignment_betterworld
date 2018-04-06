@@ -9,7 +9,7 @@ from sqlalchemy import create_engine, func, inspect
 import pymysql
 pymysql.install_as_MySQLdb()
 # Create Engine and Pass in MySQL Connection
-engine = create_engine("mysql://root:booboohead1337@localhost:3306/kiva")
+engine = create_engine(f"mysql://{user}:{password}@localhost:3306/kiva")
 
 #################################################
 # Database Setup
