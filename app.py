@@ -4,6 +4,10 @@ from credentials import user, password
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func, inspect
+import mytestutilities as myutilities
+import pickle
+
+import pandas as pd
 
 # PyMySQL 
 import pymysql
@@ -266,6 +270,74 @@ def gender_count2():
 
     return jsonify(master_list)
 
+
+@app.route("/view_clusters")
+def clusters():
+    return render_template("clusters.html")
+
+@app.route("/clusters")
+def getClusters():   
+    loan_samples_clustered = pd.read_csv('Clustered_samples_dataset.csv')
+
+    category_data = myutilities.describe_categorical(loan_samples_clustered)
+    numerical_data = myutilities.describe_numerical(loan_samples_clustered)
+
+    data = {
+        'categorical':category_data,
+        'numerical':numerical_data
+    }
+
+    return jsonify(data)
+
+@app.route("/clusters/<n>")
+def getClusterData(n):   
+    loan_samples_clustered = pd.read_csv('Clustered_samples_dataset.csv')
+
+    category_data = [myutilities.single_cluster_categorical(loan_samples_clustered,n)]
+    numerical_data = [myutilities.single_cluster_numerical(loan_samples_clustered,n)]
+
+    data = {
+        'categorical':category_data,
+        'numerical':numerical_data
+    }
+
+    return jsonify(data)
+
+@app.route("/predictNewLoans")
+def getNewLoanPrediction():   
+    latest_loans = myutilities.getLatestLoans()
+
+    print('Latest Loans',len(latest_loans))
+
+    predicted_df = pd.DataFrame()
+
+    if(len(latest_loans)>0):
+        feature_df = myutilities.getFeatureVector(latest_loans)
+
+        print(len(feature_df))
+
+        transformed_df = myutilities.applyPCA(3,feature_df)
+
+        predicted_df = latest_loans
+
+        pkl_filename = "Kiva_4_Clusters.pkl"  
+
+        # Load from file
+        with open(pkl_filename, 'rb') as file:  
+            cluster_model = pickle.load(file)
+            print('pickiling')
+
+        predicted_df['class'] = cluster_model.predict(transformed_df)
+        print('predicted')
+
+        print(len(predicted_df))
+
+        samples = predicted_df
+        samples = samples.drop_duplicates()
+        
+        samples = samples[:10][["country", "loan_amount","sector_name","activity_name", "borrower_count","class"]].to_dict(orient='records')
+
+    return jsonify(samples)
 
 if __name__ == "__main__":
     app.run(debug=True)
