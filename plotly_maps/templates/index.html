@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gender Growth</title>
+</head>
+<body>
+        <div class="showcase__section" id="bubble">
+                <div class="spacer --small"></div>
+                <div id="bubbleplots">
+                  <div class="bubbleplot" data-num="0">
+                    <div class = "plot" id="plot"></div>
+                    <div class = "plot" id="sectorplot"></div>
+                    <div class="control-row">
+                      Country: <select class="countrydata">
+                      </select>
+
+                      <a href="topCountriesByLoanCount" target="_blank">Top Countries by Loan Count</a>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+             
+    
+    <!-- <div id = "sectorplot"></div> -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
