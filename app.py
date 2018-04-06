@@ -117,7 +117,46 @@ def get_country_flag(country):
 
     return jsonify(flag_dict)
 
+@app.route("/gender_disperity")
+def gender_count():
+    results = session.query(
+    func.sum(loans.female_count).label('female_count'), func.sum(loans.male_count).label('male_count'), loans.country_name,
+    country.latitude,country.longitude
+    ).join(country, loans.country_code==country.country_code
+    ).group_by(loans.country_name
+    ).all()
 
+    gender_count_country = []
+
+    # Create a dictionary entry for each row of metadata information
+    
+    for result in results:
+        gender_metadata = {}
+        gender_metadata['COUNTRY'] = result[2]
+        gender_metadata['FEMALE'] = int(result[0])
+        gender_metadata['MALE'] = int(result[1])
+        gender_metadata['LATITUDE'] = int(result[3])
+        gender_metadata['LONGITUDE'] = int(result[4])
+        gender_count_country.append(gender_metadata)
+        
+    return jsonify(gender_count_country)
+
+@app.route("/stacked_by_year")
+def get_stacked_bar():
+
+    results = session.query(loans.sector_name, func.extract("year", loans.posted_time).label("year"), func.sum(loans.funded_amount_usd)).\
+        group_by(loans.sector_name).\
+        group_by("year")
+    empty = []
+    for a in results:
+        l = {}
+        l["sector"] = a[0]
+        l["year"] = a[1]
+        l["amount"] = int(a[2])
+        empty.append(l)
+    return jsonify(empty)
+    
+    
 if __name__ == "__main__":
     app.run(debug=True)
 

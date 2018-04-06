@@ -2,38 +2,138 @@ var map = L.map('map',{
     center:[0,0],
     zoomsnap: .25,
     zoom: 2.5,
-    scrollWheelZoom: false,
+    scrollWheelZoom: false
 });
 var streetmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/tiles/256/{z}/{x}/{y}?" +
 "access_token=pk.eyJ1IjoibWluY2tpbTEyMjIiLCJhIjoiY2pkaGp5NHR0MHd3eDMxbnF6bXlsazhxYiJ9.6WOQPTje5_AYqQO_4W36xQ").addTo(map);
 
-var url = "/countries";
-var geoURL = "https://raw.githubusercontent.com/johan/world.geo.json/master/countries.geo.json";
-d3.json(url, function(error, response){
-    if(error) console.warn(error);   
-    d3.json(geoURL, function(error, geoResponse){
-        L.geoJson(geoResponse,{
+var dark = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/dark-v9/tiles/256/{z}/{x}/{y}?" +
+"access_token=pk.eyJ1IjoibWluY2tpbTEyMjIiLCJhIjoiY2pkaGp5NHR0MHd3eDMxbnF6bXlsazhxYiJ9.6WOQPTje5_AYqQO_4W36xQ");
+
+// add local json files to load the initial map, then iterate through to create geojson tooltips
+var countryURL = "../static/files/countries.json"
+var geoJsonURL = "../static/files/countries.geo.json"
+
+
+function createGraph(country){
+    var url = `/countries/${country}`;
+    d3.json(url, function(error, response){
+        if(error) console.warn(error);
+        if(response.length != 0){
+        }
+    });
+}
+
+function getColor(d){
+    return  d > 150000 ? '#800026' :
+            d > 100000  ? '#bd0026' :
+            d > 50000  ? '#e31a1c' :
+            d > 30000  ? '#fc4e2a' :
+            d > 20000  ? '#fd8d3c' :
+            d > 10000   ? '#feb24c' :
+                        '#ffeda0';
+}
+
+var legend = L.control({position: 'bottomright'});
+
+legend.onAdd = function (map) {
+
+    var div = L.DomUtil.create('div', 'info legend'),
+        totals = [0, 10000, 20000, 30000, 50000, 100000, 150000],
+        labels = [];
+
+    // loop through our density intervals and generate a label with a colored square for each interval
+    for (var i = 0; i < totals.length; i++) {
+        div.innerHTML +=
+            '<i style="background:' + getColor(totals[i] + 1) + '"></i> ' +
+            totals[i] + (totals[i + 1] ? '&ndash;' + totals[i + 1] + '<br>' : '+');
+    }
+
+    return div;
+};
+
+legend.addTo(map);
+
+var url = "../static/files/gender_disperity.json"
+d3.json(url, function(error, response) {
+    
+  // console.log(response);
+ 
+  var femaleMarkers = [];
+  var maleMarkers = [];
+
+  //Parse through json object to extract pop-up data
+   for (var i = 0; i < response.length; i++) {
+
+    femaleMarkers.push(
+    L.minichart([response[i].LATITUDE, response[i].LONGITUDE], {type:'pie',data: [response[i].FEMALE, response[i].MALE],labels:'auto',
+    labelMinSize:8, labelMaxSize:10,width:40,height:40})
+    .bindPopup("<h5>" + response[i].COUNTRY + "</h5>\
+    <ul class=list-group>\
+    <li class=list-group-item>" + "Female_count: " + response[i].FEMALE + "</li>\
+    <li class=list-group-item>" + "Male_count: " + response[i].MALE + "</li>"
+  ))
+
+  }  
+  
+  var female = L.layerGroup(femaleMarkers);
+  d3.json(countryURL, function(error, response){
+    d3.json(geoJsonURL, function(error, geoResponse){
+        var geoLayer = L.geoJson(geoResponse,{
             style: function(feature) {
-                return {
-                fillOpacity: 0,
-                weight: 1.5
+                if(feature.properties.total)
+                {
+                return{
+                fillColor: getColor(feature.properties.total),
+                weight: 2,
+                opacity: .5,
+                dashArray: '3',
+                fillOpacity: 0.5
                 };
+                } else {
+                    return{
+                        fillOpacity: .5
+                    }
+                }
             },
             onEachFeature: function(feature, layer) {
-                // Set mouse events to change map styling
+                for (i = 0; i <response.length; i++){
+                    var curCountry = response[i];
+                    var countryName = curCountry.country;
+                    var topSector = curCountry.sectors[0];
+                    var secSector = curCountry.sectors[1];
+                    var thirdSector = curCountry.sectors[2];
+                    var topAmount = curCountry.amounts[0];
+                    var secAmount = curCountry.amounts[1];
+                    var thirdAmount = curCountry.amounts[2];
+                    var totLoans = curCountry.total;
+                    if(countryName == feature.properties.name){
+                        layer.bindPopup(`<h4>${countryName} </h4>
+                        <table>
+                            <tr><th>Sector</th><th align="right">Amount Funded</th><tr>
+                            <tr><td>${topSector}</td><td align="right">$${topAmount}</td>
+                            <tr><td>${secSector}</td><td align="right">$${secAmount}</td>
+                            <tr><td>${thirdSector}</td><td align="right">$${thirdAmount}</td>
+                        </table>
+                        <h4>Total loans : ${totLoans}</h4>`)
+                    } 
+                }
                 layer.on({
                 // When a user's mouse touches a map feature, the mouseover event calls this function, that feature's opacity changes to 90% so that it stands out
                 mouseover: function(event) {
                     layer = event.target;
                     layer.setStyle({
-                    fillOpacity: 0.5
+                    fillOpacity: 0.8
                     });
                 },
                 // When the cursor no longer hovers over a map feature - when the mouseout event occurs - the feature's opacity reverts back to 50%
                 mouseout: function(event) {
                     layer = event.target;
                     layer.setStyle({
-                    fillOpacity: 0
+                    weight: 2,
+                    opacity: .5,
+                    dashArray: '3',
+                    fillOpacity: 0.5
                     });
                 },
                 // When a feature (neighborhood) is clicked, it is enlarged to fit the screen
@@ -44,70 +144,33 @@ d3.json(url, function(error, response){
                 }
                 });                
             }
-        }).addTo(map);   
+        })
+        var overlayMaps = {
+            "Total Loan Choropleth": geoLayer,
+            "Gender Pie Chart" : female
+        };
+
+        var baseMaps = {
+            "Street" : streetmap,
+            "Dark" : dark
+        }
+        L.control.layers(baseMaps, overlayMaps).addTo(map); 
+        function hide_charts(e) {
+            e.layer.eachLayer(
+               function(t) {
+                  if (t._chart) { t._chart.remove(); }
+               }
+            );
+         }
+         map.on('overlayremove', hide_charts)
     });
-}); 
-function createGraph(country){ß
-    console.log(country);
-    if(country === "Laos"){
-        var renameCountry = "Lao People's Democratic Republic";
-        var url = `/countries/${renameCountry}`;
-        console.log(url);
-        d3.json(url, function(error, response){
-        if(error) console.warn(error);
-        console.log(response);
-    });
-    } else if(country==="United States of America"){
-        var renameCountry = "United States";
-        var url = `/countries/${renameCountry}`;
-        console.log(url);
-        d3.json(url, function(error, response){
-        if(error) console.warn(error);
-        console.log(response)
-    }); 
-    } else if(country==="Democratic Republic of the Congo"){
-    var renameCountry = "The Democratic Republic of the Congo";
-    var url = `/countries/${renameCountry}`;
-    console.log(url);
-    d3.json(url, function(error, response){
-    if(error) console.warn(error);
-    console.log(response)
-    });
-    } else if(country==="Ivory Coast"){
-        var renameCountry = "Cote D'Ivoire";
-        var url = `/countries/${renameCountry}`;
-        console.log(url);
-        d3.json(url, function(error, response){
-        if(error) console.warn(error);
-        console.log(response)
-    });
-    } else if(country==="Myanmar"){
-        var renameCountry = "Myanmar (Burma)";
-        var url = `/countries/${renameCountry}`;
-        console.log(url);
-        d3.json(url, function(error, response){
-        if(error) console.warn(error);
-        console.log(response)
-    });     
-    } else if(country==="East Timor"){
-        var renameCountry = "Timor-Leste";
-        var url = `/countries/${renameCountry}`;
-        console.log(url);
-        d3.json(url, function(error, response){
-        if(error) console.warn(error);
-        console.log(response)
-    }); 
-     
-    } else{
-        var url = `/countries/${country}`;
-        console.log(url);
-        d3.json(url, function(error, response){
-            if(error) console.warn(error);
-            if(response.length != 0){
-            console.log(response)
-            } else {
-                alert("No data for given country");
-            }
-        });
-    }
-}
+   
+})
+});
+
+// var stackedURL = "../static/files/stacked_by_year.json"
+// d3.json(stackedURL, function(error, response){
+//     console.log(response);
+//     }
+// );
+
