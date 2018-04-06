@@ -13,7 +13,7 @@ import pickle
 import pymysql
 pymysql.install_as_MySQLdb()
 # Create Engine and Pass in MySQL Connection
-engine = create_engine(f"mysql://root:Mkashi029@@localhost:3306/kiva")
+engine = create_engine(f"mysql://root:booboohead1337@localhost:3306/kiva")
 
 # #################################################
 # # Database Setup
@@ -337,5 +337,5 @@ def getNewLoanPrediction():
     return jsonify(samples)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
 
