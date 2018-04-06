@@ -1,4 +1,5 @@
 # import necessary libraries
+<<<<<<< HEAD
 # import pandas as pd
 from credentials import user, password
 from sqlalchemy.ext.automap import automap_base
@@ -6,13 +7,27 @@ from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func, inspect
 import mytestutilities as myutilities
 import pickle
+=======
+import pandas as pd
+# from credentials import user, password
+from sqlalchemy.ext.automap import automap_base
+from sqlalchemy.orm import Session
+from sqlalchemy import create_engine, func, inspect
+>>>>>>> 5a1c712b9a813ff807d3d3caa178ea100768a516
 
 import pandas as pd
 
+<<<<<<< HEAD
+=======
+import mytestutilities as myutilities
+import pickle
+
+>>>>>>> 5a1c712b9a813ff807d3d3caa178ea100768a516
 # PyMySQL 
 import pymysql
 pymysql.install_as_MySQLdb()
 # Create Engine and Pass in MySQL Connection
+<<<<<<< HEAD
 engine = create_engine(f"mysql://{user}:{password}@localhost:3306/kiva")
 
 #################################################
@@ -20,6 +35,15 @@ engine = create_engine(f"mysql://{user}:{password}@localhost:3306/kiva")
 #################################################
 
 
+=======
+engine = create_engine(f"mysql://root:Mkashi029@@localhost:3306/kiva")
+
+# #################################################
+# # Database Setup
+# #################################################
+
+
+>>>>>>> 5a1c712b9a813ff807d3d3caa178ea100768a516
 # Create Base
 Base = automap_base()
 Base.prepare(engine, reflect = True)
@@ -27,6 +51,7 @@ Base.prepare(engine, reflect = True)
 # Create our session (link) from Python to the DB
 session = Session(engine)
 conn = engine.connect()
+<<<<<<< HEAD
 
 # Set tables
 
@@ -42,6 +67,23 @@ for column in loans.__table__.columns:
     column_list_loans.append(column.key)
 for column in country.__table__.columns:
     column_list_country.append(column.key)
+=======
+
+# Set tables
+
+loans = Base.classes.loans
+country = Base.classes.country
+# flags = Base.classes.flags
+
+# # Create empty list to get column names for querying
+
+# column_list_loans = []
+# column_list_country = []
+# for column in loans.__table__.columns:
+#     column_list_loans.append(column.key)
+# for column in country.__table__.columns:
+#     column_list_country.append(column.key)
+>>>>>>> 5a1c712b9a813ff807d3d3caa178ea100768a516
 
 # print(column_list_country)
 # print(column_list_loans)
@@ -109,6 +151,7 @@ def get_country_info(country):
     return jsonify(full_dict)
 
 # Route to get flag url
+<<<<<<< HEAD
 @app.route("/flag/<country>")
 def get_country_flag(country):
     country = country.capitalize()
@@ -120,6 +163,19 @@ def get_country_flag(country):
         flag_dict["url"] = flag.url
 
     return jsonify(flag_dict)
+=======
+# @app.route("/flag/<country>")
+# def get_country_flag(country):
+#     country = country.capitalize()
+#     flag_query = session.query(flags).\
+#         filter(flags.country == country)
+#     for flag in flag_query:
+#         flag_dict = {}
+#         flag_dict["country"] = flag.country
+#         flag_dict["url"] = flag.url
+
+#     return jsonify(flag_dict)
+>>>>>>> 5a1c712b9a813ff807d3d3caa178ea100768a516
 
 @app.route("/gender_disperity")
 def gender_count():
@@ -225,8 +281,11 @@ def kenyaData():
    
     return jsonify(sel)
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 5a1c712b9a813ff807d3d3caa178ea100768a516
 @app.route("/peruData")
 def peruData():
     sel = session.query(loans.sector_name, loans.activity_name, loans.loan_amount_usd, loans.country_name, func.count(loans.loan_id), loans.num_lenders_total).filter(loans.country_name == "Peru").\
@@ -270,7 +329,10 @@ def gender_count2():
 
     return jsonify(master_list)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5a1c712b9a813ff807d3d3caa178ea100768a516
 @app.route("/view_clusters")
 def clusters():
     return render_template("clusters.html")

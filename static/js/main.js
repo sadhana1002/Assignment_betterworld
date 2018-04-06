@@ -253,7 +253,11 @@ function setBubblePlot(chosenCountry) {
 
 Plotly.d3.json(url, function(error, response) {
 
+<<<<<<< HEAD
         // console.log(response);
+=======
+        console.log(response);
+>>>>>>> 5a1c712b9a813ff807d3d3caa178ea100768a516
         borrowerResponseData = response    
         
         for (countryName in response){       
@@ -350,6 +354,7 @@ function updateCountry(){
 countrySelector.addEventListener('change', updateCountry, false);
 
 
+<<<<<<< HEAD
 var stackedURL = "../static/files/stacked_by_year.json"
 d3.json(stackedURL, function(error, response){
     // console.log(response);
@@ -451,3 +456,5 @@ d3.json(stackedURL, function(error, response){
 
     
 })
+=======
+>>>>>>> 5a1c712b9a813ff807d3d3caa178ea100768a516
